@@ -17,8 +17,8 @@ if (selLayer != ""){
 var data, txtLayer;
 if (fileObj.open("r")){
 
-	while(!fileObj.eof){
-		data = fileObj.readln().split(/\t/);
+    while(!fileObj.eof){
+        data = fileObj.readln().split(/\t/);
         
         // duplicate or new create
         if (selTxtLayer) {
@@ -31,7 +31,7 @@ if (fileObj.open("r")){
         txtLayer.property("Source Text").setValue(data[2]);
         txtLayer.startTime = parseFloat(data[0]);
         txtLayer.outPoint = parseFloat(data[1]);
-	}
+    }
 
-	fileObj.close();
+    fileObj.close();
 }
